@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# The Mabo Case
+## 1982-1992
+
+notes: The Mabo Case was a landmark decision made by the High Court of Australia that paved the way for some of the most influential and important decisions made in Australia for Aboriginal and Torres Strait Islander people, their rights, their culture, and in this case, their land.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Aboriginal and Torres Strait Islander people should be aware that this presentation contains images and names of people who have died.
+
+If you are not comfortable with the content discussed, you can leave at any time. 
+
+notes: Before we continue, I have to inform you that this presentation contains the images and names of people who have died. If you are not comfortable with the content discussed, you can leave at any time.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="1.Projects/A.Mabo Cases (HASS Assignment)/2.Attachments/Eddie Mabo 1989.jpg" alt="" style="width: 800px; object-fit: fill">
+
+
+Eddie Mabo on Murray Island, 1989. 
+
+notes: Eddie Mabo was a Torres Strait Islander man who had a strong connection with his country. Even after being forced off his island by the government, he still carried his connections and his beliefs to the Australian mainland (Hi, I'm Eddie). Feeling this strong connection to what he believed to be his land, imagine his disappointment and anger when he found out that the land he grew up on belonged to the government, not to his people (First Australians).
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="1.Projects/A.Mabo Cases (HASS Assignment)/2.Attachments/Terror Nullius.jpg" alt="" style="object-fit: scale-down">
+
+
+*Terra Nullius*
+
+notes: *Terra nullius* is a Latin phrase meaning "land belonging to no one", which has been interpreted by colonial rule as the absence of "civilised" people. It was first used in 1835 by NSW Governor Richard Bourke to legally justify the basis for British settlement. When James Cook and the First Fleet arrived in Australia, they assumed that Australia's Indigenous people had no political organisation, thus could not sign treaties and had no control of their land, which they thought justified the enacting of terra nullius.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="1.Projects/A.Mabo Cases (HASS Assignment)/2.Attachments/Mabo Plaintiffs L-R.png" alt="" style="object-fit: scale-down">
+
+
+L to R: Father Dave Passi, Eddie Koiki Mabo, Bonita Mabo, Bryan Keon-Cohen, James Rice, Eddie Mabo Jnr & Henry Kabere
+
+notes: Following a land rights conference in 1981, Mabo and four others (Reverend David Passi, James Rice and, not photographed here, Sam Passi and Celuia Mapo Sale), collectively "the plaintiffs" filed a case against the Queensland Government in the High Court of Australia in May 1982 for legal ownership of Mer, also known as Murray Island.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="1.Projects/A.Mabo Cases (HASS Assignment)/2.Attachments/Murray Island.jpg" alt="" style="object-fit: scale-down">
+
+
+Mer (Murray Island)
+
+notes: The case challenged two major misconceptions in the legal system (AIATSIS):
+
+- Indigenous peoples had no concept of land ownership before the arrival of the British.
+- The initial colonists claimed complete ownership of Australia and surrounding areas to belong to the Crown, abolishing any previously existing land rights.
+
+On the 27th of February 1986, the High Court sent the case to the Supreme Court of Queensland to determine the extent of the claim. This hearing was later adjourned when the plaintiffs filed another case with the High Court; challenging the recently passed *Queensland Coast Island Declaratory Act 1985* (AIATSIS) which the Queensland Government passed to "extinguish without compensation" any Torres Strait Islander claims to land in an attempt to stop the initial case (NMA, AIATSIS).
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="1.Projects/A.Mabo Cases (HASS Assignment)/2.Attachments/Mabo at Anzac Park.jpg" alt="" style="object-fit: scale-down">
+
+
+Bryan Keon-Cohen, Eddie Mabo and others at ANZAC Park, Mer Island
+
+notes: In December 1988, the High Court ruled that the *Island Declaratory Act* was in violation of the *Commonwealth Racial Discrimination Act 1975*, thus rendering the *Island Act* null. This allowed the High Court to continue hearing Mabo No. 2, the original Meriam land rights case (NMA).
+
+On the 16th of November 1990, the Supreme Court finished its determination of facts, allowing the High Court to hear the legal issues raised by the plaintiffs, where on the 3rd of June, 1992, six of the seven High Court judges ruled in favour of the Meriam people, ruling that *terra nullius* should never have been applied to Australia and that the Meriam people held the land rights of Murray Island (AIATSIS).
+
+Unfortunately, by the time the case had concluded, three of the five plaintiffs – Eddie Mabo, Sam Passi and Celuia Mapo Sale – had died (NMA).
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Impacts
+
+notes: The Mabo Case was the first time the Government of Australia had acknowledged that there were others occupying the Australian and surrounding regions before the British colonisers. This was a groundbreaking decision for the Indigenous population, as the government had never previously recognised the continued connection to land that Aboriginal and Torres Strait Islander people share.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="1.Projects/A.Mabo Cases (HASS Assignment)/2.Attachments/Native Title Background Image.jpg" alt="" style="width: 800px; object-fit: fill">
+
+
+A meeting discussing the Mabo decision
+(NAA: A13966, 930538)
+
+notes: Additionally, this was the *first time* an Aboriginal or Torres Strait Islander person had claimed land ownership from the Crown. After the Mabo Case, the Australian Parliament passed the *Native Title Act 1993*, a framework for other Australian Indigenous people to claim "native title" of their land.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Shortcomings
+
+notes: However, the conclusion of the Mabo Case is not perfect. The *Native Title Act* suffers from three major problems (Australian Museum):
+
+- Native title does not grant ownership to its holders
+- Those seeking native title need to prove an unbroken connection to the land
+- Obtaining native title is a long process, sometimes taking decades with no return
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Native Title
+## ≠
+## Ownership
+
+notes: Firstly, ownership problems. Native title doesn't grant any kind of ownership to its holders. Whilst the Mabo case granted land ownership to the Meriam people, no such right is granted to applicants of native title. This is done to avoid conflicts with pre-existing organisations such as mining companies, local governments and others who have already settled on the land. Native title mainly grants pre-colonial rights, such as the right to camp, perform ceremonies and protect cultural sites.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Unbroken Connection
+
+notes: Secondly, those who are seeking native title have to prove an unbroken connection to the land. This is often difficult to prove after Australia's colonial history of suppressing Indigenous people. Records that prove their connection could have already been destroyed, lost or mistreated to the point of being unreadable.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## It Can Take Decades
+(Literally)
+
+notes: Lastly, obtaining native title is an incredibly long process, like in the case of the Barkandji Native Title case, which took almost two decades to complete. Whilst not a native title case, over the 10 years that the Mabo case took place, 33 Meriam people, including the plaintiffs, generated 4,000 pages of evidence to prove the continued occupation of Mer. Imagine if that was doubled. Native title owners don't get any compensation from this process either; if oil or minerals is found on Country belonging to a native title holder, they have *no rights* to it. The government can hold and sell those resources as they please.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="1.Projects/A.Mabo Cases (HASS Assignment)/2.Attachments/Paul Keating Redfern Speech.png" alt="" style="object-fit: scale-down">
+
+
+Paul Keating delivers the Redfern Speech
+
+notes: But even through the problems that the *Native Title Act* suffers, The Mabo Case was the first step by colonial rule to reconcile with the Aboriginal and Torres Strait Islander people. Mabo has been cited as a major inspiration for Paul Keeting's Redfern Address, which was recognised as the third most unforgettable speech of all time and helped paved the way for...
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="1.Projects/A.Mabo Cases (HASS Assignment)/2.Attachments/Kevin Rudd Apology.jpg" alt="" style="width: 350 px; height: 525px; object-fit: fill">
+
+
+Kevin Rudd delivers his sorry speech
+
+notes: ...Kevin Rudd's formal apology to Indigenous Australians in 2007, both of which are landmark speeches recognised as powerful movements of reconciliation. Had the High Court not come to its final decision, and Mabo not fought so hard, these major acts may never have happened.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="1.Projects/A.Mabo Cases (HASS Assignment)/2.Attachments/Eddie Mabo Portrait.webp" alt="" style="object-fit: scale-down">
+
+
+Portrait of Eddie Mabo, created by Marc Némorin
+
+notes: Whilst Eddie Mabo did have a star named after him in the Tagai constellation, his main legacy lives on in the *Native Title Act*, a document that change Australian culture so radicly that he now has a day in Reconciliation Week, Mabo Day, which happens every year on June 3rd, the day that the High Court made their landmark decision. 2024 marks the 32nd anniversary of the decision, the impact of which is still felt to this day.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Conclusion
+
+notes: Eddie Mabo never saw the completion of his work. He never had the victory parade out of the courts that he so deserved. Yet he is never forgotten. Despite its controversies, the Mabo Case was the first in a long line of moves made by the Australian Government to reconcile with Aboriginal and Torres Strait Islander people, and thanks to its impact, it won't be the last. To those of you who are still listening, thank you, and happy Mabo Day. Any questions?
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+	      RevealPointer,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+			]
+		},
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":false,"progress":true,"slideNumber":false,"transition":"none","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
