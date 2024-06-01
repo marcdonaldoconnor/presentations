@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<title>Mabo Case References</title>
+		<style>
+			body { font-family:Cambria; font-size:12pt }
+			h1, h2, h3, h4, h5, h6, p { margin:20pt 20pt 20pt }
+			li { margin-top:0pt; margin-bottom:10pt }
+			h1 { margin-top:24pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:16pt; font-weight:bold; color:#4f81bd }
+			h2 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:14pt; font-weight:bold; color:#4f81bd }
+			h3 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:12pt; font-weight:bold; color:#4f81bd }
+			h4 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:12pt; font-weight:normal; font-style:italic; color:#4f81bd }
+			h5 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:12pt; font-weight:normal; color:#4f81bd }
+			h6 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:12pt; font-weight:normal; font-style:normal; color:#4f81bd }
+			.Heading7 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:12pt; font-weight:normal; font-style:normal; color:#4f81bd }
+			.Heading8 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:12pt; font-weight:normal; color:#4f81bd }
+			.Heading9 { margin-top:10pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:12pt; font-weight:normal; font-style:normal; color:#4f81bd }
+			.Abstract { margin-top:5pt; margin-bottom:15pt; page-break-inside:avoid; page-break-after:avoid; font-size:10pt }
+			.AbstractTitle { margin-top:15pt; margin-bottom:0pt; text-align:center; page-break-inside:avoid; page-break-after:avoid; font-size:10pt; font-weight:bold; color:#345a8a }
+			.Author { margin-bottom:10pt; text-align:center; page-break-inside:avoid; page-break-after:avoid; font-size:12pt }
+			.Bibliography { margin-bottom:10pt; font-size:12pt }
+			.BlockText { margin:5pt 24pt; text-indent:0pt; font-size:12pt }
+			.BodyText { margin-top:9pt; margin-bottom:9pt; font-size:12pt }
+			.Caption { margin-top:0pt; margin-bottom:6pt; font-size:12pt; font-style:italic }
+			.CaptionedFigure { margin-bottom:10pt; page-break-after:avoid; font-size:12pt }
+			.Compact { margin-top:1.8pt; margin-bottom:1.8pt; font-size:12pt }
+			.Date { margin-bottom:10pt; text-align:center; page-break-inside:avoid; page-break-after:avoid; font-size:12pt }
+			.Definition { margin-bottom:10pt; font-size:12pt }
+			.DefinitionTerm { margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; font-size:12pt; font-weight:bold }
+			.Figure { margin-bottom:10pt; font-size:12pt }
+			.FirstParagraph { margin-top:9pt; margin-bottom:9pt; font-size:12pt }
+			.FootnoteBlockText { margin:5pt 24pt; text-indent:0pt; font-size:12pt }
+			.FootnoteText { margin-bottom:10pt; font-size:12pt }
+			.ImageCaption { margin-top:0pt; margin-bottom:6pt; font-size:12pt; font-style:italic }
+			.SourceCode { margin-bottom:10pt; font-size:12pt }
+			.Subtitle { margin-top:12pt; margin-bottom:12pt; text-align:center; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:15pt; font-weight:bold; color:#345a8a }
+			.TOCHeading { margin-top:12pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:108%; font-family:Calibri; font-size:16pt; font-weight:normal; color:#365f91 }
+			.TableCaption { margin-top:0pt; margin-bottom:6pt; page-break-after:avoid; font-size:12pt; font-style:italic }
+			.Title { margin-top:24pt; margin-bottom:12pt; text-align:center; page-break-inside:avoid; page-break-after:avoid; font-family:Calibri; font-size:18pt; font-weight:bold; color:#345a8a }
+			span.AlertTok { font-family:Consolas; font-size:11pt; font-weight:bold; color:#ff0000 }
+			span.AnnotationTok { font-family:Consolas; font-size:11pt; font-weight:bold; font-style:italic; color:#60a0b0 }
+			span.AttributeTok { font-family:Consolas; font-size:11pt; color:#7d9029 }
+			span.BaseNTok { font-family:Consolas; font-size:11pt; color:#40a070 }
+			span.BuiltInTok { font-family:Consolas; font-size:11pt; color:#008000 }
+			span.CharTok { font-family:Consolas; font-size:11pt; color:#4070a0 }
+			span.CommentTok { font-family:Consolas; font-size:11pt; font-style:italic; color:#60a0b0 }
+			span.CommentVarTok { font-family:Consolas; font-size:11pt; font-weight:bold; font-style:italic; color:#60a0b0 }
+			span.ConstantTok { font-family:Consolas; font-size:11pt; color:#880000 }
+			span.ControlFlowTok { font-family:Consolas; font-size:11pt; font-weight:bold; color:#007020 }
+			span.DataTypeTok { font-family:Consolas; font-size:11pt; color:#902000 }
+			span.DecValTok { font-family:Consolas; font-size:11pt; color:#40a070 }
+			span.DocumentationTok { font-family:Consolas; font-size:11pt; font-style:italic; color:#ba2121 }
+			span.ErrorTok { font-family:Consolas; font-size:11pt; font-weight:bold; color:#ff0000 }
+			span.ExtensionTok { font-family:Consolas; font-size:11pt }
+			span.FloatTok { font-family:Consolas; font-size:11pt; color:#40a070 }
+			span.FootnoteReference { vertical-align:super }
+			span.FunctionTok { font-family:Consolas; font-size:11pt; color:#06287e }
+			span.Hyperlink { text-decoration:none; color:#4f81bd }
+			span.ImportTok { font-family:Consolas; font-size:11pt; font-weight:bold; color:#008000 }
+			span.InformationTok { font-family:Consolas; font-size:11pt; font-weight:bold; font-style:italic; color:#60a0b0 }
+			span.KeywordTok { font-family:Consolas; font-size:11pt; font-weight:bold; color:#007020 }
+			span.NormalTok { font-family:Consolas; font-size:11pt }
+			span.OperatorTok { font-family:Consolas; font-size:11pt; color:#666666 }
+			span.OtherTok { font-family:Consolas; font-size:11pt; color:#007020 }
+			span.PreprocessorTok { font-family:Consolas; font-size:11pt; color:#bc7a00 }
+			span.RegionMarkerTok { font-family:Consolas; font-size:11pt }
+			span.SpecialCharTok { font-family:Consolas; font-size:11pt; color:#4070a0 }
+			span.SpecialStringTok { font-family:Consolas; font-size:11pt; color:#bb6688 }
+			span.StringTok { font-family:Consolas; font-size:11pt; color:#4070a0 }
+			span.VariableTok { font-family:Consolas; font-size:11pt; color:#19177c }
+			span.VerbatimChar { font-family:Consolas; font-size:11pt }
+			span.VerbatimStringTok { font-family:Consolas; font-size:11pt; color:#4070a0 }
+			span.WarningTok { font-family:Consolas; font-size:11pt; font-weight:bold; font-style:italic; color:#60a0b0 }
+		</style>
+	</head>
+	<body>
+			<p class="Title">
+				Bibliography
+			</p>
+			<p class="FirstParagraph">
+				<a id="bibliography">Australian Human Rights Commission. “1992 Human Rights Medal and Awards Winners.” Accessed May 31, 2024. </a><a href="https://humanrights.gov.au/our-work/1992-human-rights-medal-and-awards-winners" style="text-decoration:none"><span class="Hyperlink">https://humanrights.gov.au/our-work/1992-human-rights-medal-and-awards-winners</span></a>.
+			</p>
+			<p class="BodyText">
+				Australian Institute of Aboriginal and Torres Strait Islander Studies. “The Mabo Case.” Australian Institute of Aboriginal and Torres Strait Islander Studies. AIATSIS, July 13, 2023. <a href="https://aiatsis.gov.au/explore/mabo-case" style="text-decoration:none"><span class="Hyperlink">https://aiatsis.gov.au/explore/mabo-case</span></a>.
+			</p>
+			<p class="BodyText">
+				Australian Museum. “Limitations of Native Title.” The Australian Museum, April 5, 2023. <a href="https://australian.museum/learn/first-nations/barka/native-title-limitations/" style="text-decoration:none"><span class="Hyperlink">https://australian.museum/learn/first-nations/barka/native-title-limitations/</span></a>.
+			</p>
+			<p class="BodyText">
+				———. “Terra Nullius.” The Australian Museum, 2021. <a href="https://australian.museum/learn/first-nations/unsettled/recognising-invasions/terra-nullius/" style="text-decoration:none"><span class="Hyperlink">https://australian.museum/learn/first-nations/unsettled/recognising-invasions/terra-nullius/</span></a>.
+			</p>
+			<p class="BodyText">
+				“First Australians.” TV series episode. SBS, 2008. <a href="https://www.sbs.com.au/ondemand/watch/11723331504" style="text-decoration:none"><span class="Hyperlink">https://www.sbs.com.au/ondemand/watch/11723331504</span></a>.
+			</p>
+			<p class="BodyText">
+				Getty Images. <em>Kevin Rudd Delivers His Sorry Speech</em>. Online image. <em>Who Australia</em>. Accessed May 31, 2024. <a href="https://www.who.com.au/kevin-rudd-sorry-speech" style="text-decoration:none"><span class="Hyperlink">https://www.who.com.au/kevin-rudd-sorry-speech</span></a>.
+			</p>
+			<p class="BodyText">
+				Gilchrist, Catie. “Redfern Park.” Dictionary of Sydney, 2015. <a href="https://dictionaryofsydney.org/entry/redfern_park" style="text-decoration:none"><span class="Hyperlink">https://dictionaryofsydney.org/entry/redfern_park</span></a>.
+			</p>
+			<p class="BodyText">
+				“Hi, I’m Eddie.” Podcast. State Library of Queensland, May 2022. <a href="https://www.slq.qld.gov.au/discover/podcasts/hi-im-eddie" style="text-decoration:none"><span class="Hyperlink">https://www.slq.qld.gov.au/discover/podcasts/hi-im-eddie</span></a>.
+			</p>
+			<p class="BodyText">
+				John Oxley Library. <em>Bryan Keon-Cohen, Ron Day, Eddie Mabo and Martin Moynihan at ANZAC Park, Mer Island, May 1989</em>. Online image. <em>Queensland Procter</em>. Accessed May 31, 2024. <a href="https://www.qlsproctor.com.au/2022/06/30-years-on-the-significance-of-the-mabo-decision/" style="text-decoration:none"><span class="Hyperlink">https://www.qlsproctor.com.au/2022/06/30-years-on-the-significance-of-the-mabo-decision/</span></a>.
+			</p>
+			<p class="BodyText">
+				Keon-Cohen, B. A. “The Mabo Litigation: A Personal and Procedural Account.” <em>Melbourne University Law Review</em>, 2000. <a href="https://www.austlii.edu.au/cgi-bin/viewdoc/au/journals/MelbULawRw/2000/35.html" style="text-decoration:none"><span class="Hyperlink">https://www.austlii.edu.au/cgi-bin/viewdoc/au/journals/MelbULawRw/2000/35.html</span></a>.
+			</p>
+			<p class="BodyText">
+				<em>Mabo Plaintiffs and Witness with Their Lawyer, Supreme Court of Queensland, May 1989</em>. Online image. <em>Melbourne Law School</em>. Accessed May 31, 2024. <a href="https://law.unimelb.edu.au/iljh/research/mls-classroom-photo-mural-initiative/classroom-photos/mabo-image" style="text-decoration:none"><span class="Hyperlink">https://law.unimelb.edu.au/iljh/research/mls-classroom-photo-mural-initiative/classroom-photos/mabo-image</span></a>.
+			</p>
+			<p class="BodyText">
+				<em>Mabo Plaintiffs, Witnesses and Their Lawyer at the Supreme Court of Queensland, Brisbane, May 1989</em>. 1989. Online image. <em>Powerhouse Collection</em>. <a href="https://collection.powerhouse.com.au/object/599484" style="text-decoration:none"><span class="Hyperlink">https://collection.powerhouse.com.au/object/599484</span></a>.
+			</p>
+			<p class="BodyText">
+				National Archives of Australia. <em>A Meeting of Aboriginal Representatives, Ministers and Prime Minister Paul Keating</em>. April 27, 1993. Online image. <em>National Archives of Australia</em>. <a href="https://recordsearch.naa.gov.au/SearchNRetrieve/Interface/ViewImage.aspx?B=31709513" style="text-decoration:none"><span class="Hyperlink">https://recordsearch.naa.gov.au/SearchNRetrieve/Interface/ViewImage.aspx?B=31709513</span></a>.
+			</p>
+			<p class="BodyText">
+				National Museum of Australia. <em>Eddie Koiki Mabo at Las, Murray Island, 1989</em>. Online image. <em>Mabo Decision</em>. Accessed May 30, 2024. <a href="https://www.nma.gov.au/defining-moments/resources/mabo-decision" style="text-decoration:none"><span class="Hyperlink">https://www.nma.gov.au/defining-moments/resources/mabo-decision</span></a>.
+			</p>
+			<p class="BodyText">
+				———. “Mabo Decision.” <em>National Museum of Australia</em>, November 16, 2022. <a href="https://www.nma.gov.au/defining-moments/resources/mabo-decision" style="text-decoration:none"><span class="Hyperlink">https://www.nma.gov.au/defining-moments/resources/mabo-decision</span></a>.
+			</p>
+			<p class="BodyText">
+				———. <em>Mer (Murray Island), Torres Strait</em>. Online image. <em>Australia’s Defining Moments Digital Classroom</em>. Accessed May 31, 2024. <a href="https://digital-classroom.nma.gov.au/images/mer-murray-island-torres-strait" style="text-decoration:none"><span class="Hyperlink">https://digital-classroom.nma.gov.au/images/mer-murray-island-torres-strait</span></a>.
+			</p>
+			<p class="BodyText">
+				Némorin, Marc. <em>Portrait of Land Rights Advocate, Eddie Mabo</em>. Online image. <em>Nemorin.com.au</em>. Accessed May 31, 2024. <a href="https://www.nemorin.com.au/portfolio?pgid=loqimp6g-42605577-685c-4664-9d63-0126bcf7c04b" style="text-decoration:none"><span class="Hyperlink">https://www.nemorin.com.au/portfolio?pgid=loqimp6g-42605577-685c-4664-9d63-0126bcf7c04b</span></a>.
+			</p>
+			<p class="BodyText">
+				Parliament of Australia. “The Mabo Decision.” Accessed May 31, 2024. <a href="https://www.aph.gov.au/Visit_Parliament/Art/Stories_and_Histories/The_Mabo_decision" style="text-decoration:none"><span class="Hyperlink">https://www.aph.gov.au/Visit_Parliament/Art/Stories_and_Histories/The_Mabo_decision</span></a>.
+			</p>
+			<p class="BodyText">
+				Reconciliation Australia. “The Mabo Native Title Decision,” February 2024. <a href="https://www.reconciliation.org.au/wp-content/uploads/2024/02/Mabo-Day-Factsheet-.pdf" style="text-decoration:none"><span class="Hyperlink">https://www.reconciliation.org.au/wp-content/uploads/2024/02/Mabo-Day-Factsheet-.pdf</span></a>.
+			</p>
+			<p class="BodyText">
+				Smith, Keith. <em>Prime Minister Paul Keating Delivers the Redfern Speech, 10 December 1992</em>. 2020. Online image. <em>Eora People</em>. <a href="https://www.eorapeople.com.au/uncategorized/redfern-park-heritage/" style="text-decoration:none"><span class="Hyperlink">https://www.eorapeople.com.au/uncategorized/redfern-park-heritage/</span></a>.
+			</p>
+			<p class="BodyText">
+				Syron, Gordon. <em>Terror Nullius</em>. 2011. Digitised painting. <em>The Australian Museum</em>. <a href="https://australian.museum/learn/first-nations/unsettled/recognising-invasions/terra-nullius/" style="text-decoration:none"><span class="Hyperlink">https://australian.museum/learn/first-nations/unsettled/recognising-invasions/terra-nullius/</span></a>.
+			</p>
+</body>
+</html>
