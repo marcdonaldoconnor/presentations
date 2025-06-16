@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/serif.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Analysis: High school student lands crushing blow against news.com.au; commercial media
+
+*Eye-opening presentation reveals how the media has become swamped with "good enough" journalism*
+##### By Liam O'Connor
+
+notes: "The 2025 federal election covered many issues, but none so prevalent as the housing crisis, a topic of practically endless debate. Throughout the election cycle it has been covered by media from the left, right and centre, though it quickly becomes apparent that some sources are better than others."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/Politics Media Presentation/Attachments/alan-kohler.jpeg" alt="" style="object-fit: scale-down">
+
+
+*Above: Alan Kohler (1)*
+
+notes: - Introduce Alan Kohler
+- He works for ABC news as an economist
+- Frequently reporting on the housing crisis
+- A very well respected, centrist reporter and analyst
+- Can be argued that, since he primarily works for ABC news, he is government-funded
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/Politics Media Presentation/Attachments/news-com-au-logo.jpeg" alt="" style="object-fit: scale-down">
+
+
+*Above: news.com.au logo (2)*
+
+notes: - A well-rounded example of commercial media
+- Writes independently as well as supporting other outlets
+- Very popular
+- Allegedly beating ABC news in month-to-month internet traffic comparisons
+- Leans right; more centrist than other Murdoch media
+
+"These two outlets can be summarised with two slightly different statements."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+##### Alan Kohler
+# Neutral to the point of boring
+#####
+
+notes: - Kohler is "neutral to the point of boring"
+- Presents multiple viewpoints, not just the main parties
+- Equally distributes criticism
+
+(more notes on next slide)
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/Politics Media Presentation/Attachments/video-housing-the-governments-first-priority-post-election.png" alt="" style="object-fit: scale-down">
+
+
+##### *Multiple problems; multiple solutions (3)*
+
+notes: - Weighs the upsides and downsides of each solution
+- Gives all the facts to the audience
+- Uncontroversial analysis and reports in a way that could be passed off as "boring"
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+##### news.com.au
+# Nothing more, nothing less
+#####
+
+notes: "On the other hand, news.com.au presents nothing less then what they need to, but nothing more that could be of value to their audience."
+
+- Often just presents the talking points and policies of each party
+
+"as seen in this example..."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/Politics Media Presentation/Attachments/coalition-policies.png" alt="" style="object-fit: scale-down">
+
+
+##### *Reports on policies, though little analysis (4)*
+
+notes: "...an article wrapping up each party policy in preparation for an election just a few days out. Unlike Kohler, news.com.au articles usually lack a hard-driven angle of solution-finding, and read more like a tasteless, unoriginal parrot of what the major parties want you to believe."
+
+"Unfortunately, for the articles that *do* include a more original angle, news.com.au seems to disregard quality even more so."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/Politics Media Presentation/Attachments/matthew-ricketson.jpeg" alt="" style="object-fit: scale-down">
+
+
+*Above: Prof. Matthew Ricketson (5)*
+
+notes: "This is Matthew Ricktson, a professor in communications and journalism at Deakin University in Melbourne. Ricketson recently covered some of the problems facing the Murdoch media, including news.com.au, of which two criticisms are of note to this argument."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## "A culture war imported from America"
+\- Prof. Matthew Ricketson (6)
+
+notes: "Firstly, a focus on what Ricketson has called a 'culture war imported from America', at a time when Australian's aren't concerned with these issues. The Murdoch media is notorious for attempting to bring topics like immigration out of the sphere of consensus, and news.com.au is no exception."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+##### news.com.au
+
+<img src="03 Projects/Politics Media Presentation/Attachments/headline-the-solution-to-australias-housing-crisis-is-to-cut-immigration.png" alt="" style="width: 900px; object-fit: fill">
+
+<img src="03 Projects/Politics Media Presentation/Attachments/headline-australian-nightmare-crisis-we-cant-ignore.png" alt="" style="object-fit: scale-down">
+
+##### *A non-existent culture war (7)*
+
+notes: "These are two examples of such behaviour, with one article being an opinion piece from Sky News, and the other an in-house piece, both claiming that the housing crisis is primarily caused by immigration."
+
+- The in-house article is a bit more tame than the Sky News piece
+- Not covering the whole truth
+
+"Now hold onto that thought, because we'll come back to that in a bit."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## "Shoutier and shoutier"
+\- Prof. Matthew Ricketson (8)
+
+notes: - To "maximise their audience", media companies have toned down on factual reporting and increased opinion pieces
+- With the media having to get "shoutier and shoutier"
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/Politics Media Presentation/Attachments/headline-band-aid-solutions-albo-dutton-lashed-for-election-spending.png" alt="" style="object-fit: scale-down">
+
+<img src="03 Projects/Politics Media Presentation/Attachments/headline-australian-election-2025-albanese-dutton-blitz-final-day-of-campaigning-before-saturdays-election.png" alt="" style="object-fit: scale-down">
+
+
+###### (9)
+
+notes: - Two examples of news.com.au bringing in more "clickbait" headlines
+- Harsher word tone
+- Making something out of nothing
+
+"That first article is actually one of note, so let's have a closer look at that one."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+##### news.com.au
+
+<img src="03 Projects/Politics Media Presentation/Attachments/headline-band-aid-solutions-albo-dutton-lashed-for-election-spending.png" alt="" style="object-fit: scale-down">
+
+<img src="03 Projects/Politics Media Presentation/Attachments/weak-sources-news-com-au.png" alt="" style="object-fit: scale-down">
+
+
+###### (10)
+
+notes: - The entire article only uses one source
+- Reads similar to other stories on news.com.au
+- Slightly tasteless
+- Parroting the experts instead of properly analysing
+- Weaker article
+- Lower quality news source
+
+"All of these problems can be explained with one simple realisation..."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+##### news.com.au
+# Advertising triumphs all
+##### *The Manufacturing Consent model*
+
+notes: "... advertising triumphs all. News.com.au is ultimately a for-profit company, and that means that they are eventually beholden to the whims of the stakeholders, and the advertisers."
+
+- Falls under Noam Chompsky's model of manufacturing consent
+- Headlines are clickbait-y to encourage more people to click
+- It's quicker to simply repeat what other people say rather than make your own analysis
+- Immigration is included to cater to their reader base, which is more right wing, in the hopes of building a loyal, rather than informed audience
+- It's nothing more, nothing less
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+##### Alan Kohler
+
+<img src="03 Projects/Politics Media Presentation/Attachments/headline-labor-and-liberal-housing-policies-are-not-enough.png" alt="" style="width: 900px; object-fit: fill">
+
+
+##### *Presenting the facts: an Active Audience (11)*
+
+notes: "Kohler doesn't have to build a loyal audience through agreement, he builds an informed audience that trusts him as a reputable news source, which is far better for the public than news.com.au's echo chambers."
+
+- Kohler believes in an active audience, who votes with their feet
+- Always attempts to leave them informed
+
+"Kohler can do this because, ironically, he's..."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/Politics Media Presentation/Attachments/video-what-you-can-expect-from-this-weeks-federal-budget.png" alt="" style="object-fit: scale-down">
+
+
+##### *An economist unconcerned with money (12)*
+
+notes: "... an economist unconcerned with money."
+
+- Most of his income is taxpayer-funded
+- Doesn't have to worry about appealing to advertisers or shareholders and can get stuck in to reporting
+
+"He can get a lot closer to the truth than any commercial media could, simply because he has less barriers to overcome before publishing a story."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## In defence of commercial media
+
+*It's not necessarily bad journalism*
+
+notes: - It's not malicious journalism or evil journalism, and it's not terrible journalism either, but it's just not the same as Kohler.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Conclusion
+
+notes: 
+
+- Neutral to the point of boring
+- Nothing more, nothing less
+- Manufacturing Consent
+- Active Audience
+- Kohler is simply better journalism
+
+"Unfortunately for news.com.au, unless they make fundamental shifts in their business model and how they operate, they probably won't catch up to Kohler any time soon. This has been Liam O'Connor, Noteworthy News, Canberra."
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+References available online at https://marcdonaldoconnor.github.io/presentations/good-enough-journalism/references.html
+
+Script available online at https://marcdonaldoconnor.github.io/presentations/good-enough-journalism/script.html
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+	      RevealPointer,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+			]
+		},
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":false,"progress":false,"slideNumber":false,"transition":"none","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
