@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Capitalist Oligarchy in the Modern World
+
+###### By Liam O'Connor
+
+notes: Oligarchies do not form overnight. To create a successful oligarchy requires careful planning, collaboration, and a lot of collusion, even more so in a democracy. A separation of powers is what keeps a democracy in check after all, and only when those powers assemble can the system be truly undermined and an oligarchy established. This process is happening right now, in one of the most powerful nations in the world, and the only way it can be stopped is understanding how it can form it the first place. But first, what is an oligarchy?
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## What is an oligarchy?
+
+notes: According to Wikipedia, Oligarchy (translated as "rule by few") is "a form of government in which power rests with a small number of people," and the people in power are known as "oligarchs." Whilst anybody can become an oligarch, typically the most powerful and influential individuals in a society take power, which, in a capitalist society, is usually the most wealthy. In recent history there have been a number of oligarchies; this presentation will focus on two of the most egregious: Russia in the 1990s and the United States in 2025.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+###### Part 1:
+## Russian Oligarchy
+
+notes: The collapse of the USSR in the 1990s provided the perfect breeding ground for an oligarchy in the newly-renamed Russian Federation.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/American Oligarchy Presentation/Attachments/establishing-independent-states.png" alt="" style="object-fit: scale-down">
+
+
+###### *Signing of Protocol on Establishing Commonwealth of Independent States* (1)
+
+notes: In the 1980s the Soviet Union experienced significant economic stagnation, which prompted the final Soviet president to pursue sweeping economic reform, inspired by Western capitalist economies. Unfortunately, nothing could stop the disintegrating USSR, and after the formal dissolution on the 26th December 1991, the Russian Federation, considered the *de facto* successor state, was given control over the Soviet Union's state-owned assets.
+
+After the fall of the USSR, the push to abandon communism in the Eastern Bloc did not stop. As part of their overall strategy of implementing capitalism through so-called "shock-therapy" to the economy, the Russian Federation decided to implement ...
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/American Oligarchy Presentation/Attachments/privatisation-voucher.jpg" alt="" style="object-fit: scale-down">
+
+
+###### *A Russian privatisation voucher, cira. 1992* (2)
+
+notes: ... a voucher privatisation program to get rid of the inherited assets, where citizens could receive shares in state-owned companies for free. However, due to poor regulation and a lack of education surrounding the program, a large number of citizens were convinced by wealthy businessmen to sell their shares for cash to keep themselves afloat in the struggling economy. This caused most of the former Soviet assets to be shepherded up by a small group of connected individuals, with some estimates of more than a quarter of national income going to the top 1%, who then proceed to siphon wealth out of Russia by storing their cash in offshore bank accounts, furthering the economic crisis.
+
+Russian citizens soon caught on to the lack of change, and ...
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/American Oligarchy Presentation/Attachments/boris-yeltsin.jpg" alt="" style="width: 450px; object-fit: fill">
+
+
+###### *Official presidential portrait of Boris Yeltsin* (3)
+
+notes: Boris Yeltsin, the Russian president, subsequently suffered a hit to his reputation. In order to win the 1996 election, he employed another scheme—a "loans for shares" policy. The idea was to temporarily loan out the remaining state-owned shares in large industrial assets at auctions to commercial banks, in exchange for cash loans to fund the election campaign. However, these auctions were rigged by insiders, and when the government inevitably defaulted on the loans, the oligarchs kept their shares. Yeltsin went on to win the 1996 election, keeping himself in office by harnessing the economic might of his inner circle.
+
+Since state control had disappeared so quickly, and capitalism was more focused on flying money out of the country then covering the power vacuum, the Russian mafia arose to fill the gap. Organised crime was allowed to run rampant, because the oligarchs controlling the economy realised that it was in their best interests to raise themselves above the law and avoid prosecution and punishment. The mafia was allowed to run Russia because Yeltsin agreed to turn a blind eye, so long as he remained in power.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+#### Features of oligarchy <!-- .element: class="fragment semi-fade-out" data-fragment-index="1" -->
+
+1. Control over the economy <!-- .element: class="fragment fade-in-then-semi-out" data-fragment-index="1" -->
+2. Collusion with government <!-- .element: class="fragment fade-in-then-semi-out" -->
+3. Ignorance of the law <!-- .element: class="fragment fade-in-then-semi-out" -->
+
+notes: From this short summary of Russian oligarchy, three key features can be derived:
+
+1. Economic control becoming concentrated with a small group of people
+2. This group of people then colluding with the government for their own benefit
+3. Using their power over the economy and political system to ignore the rule of law
+
+The first two are especially important for an oligarchy—having control over both the economic and political spheres is what gives oligarchs their power, as only then can they control a state unopposed. Now, there is also another country in recent history that exhibits these key features...
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+###### Part 2:
+### The Argument for
+## The United States
+
+notes: The United States of America.
+
+Since the inauguration of Donald Trump, the United States has shifted rapidly towards becoming an oligarchy. The first feature, whilst not immediately noticeable, has been ongoing since at least the 1980s, when the influential Powell Memo was written.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/American Oligarchy Presentation/Attachments/lewis-powell.jpg" alt="" style="width: 450px; object-fit: fill">
+
+
+###### *Official judicial portrait of Lewis Powell* (4)
+
+notes: Lewis Powell's memorandum, entitled "Attack on American Free Enterprise System", written in 1971, called for an end to the "New Deal" style policies which curtailed American businesses in the 1920s-1940s, and for corporate power to "retake America." This essentially meant taking economic power away from the workers and giving it back to the upper class, and protecting that capital from being recovered. Whilst this trend of economic concentration has been ongoing since the Powell Memo was distributed, the Trump administration has vastly accelerated this trend. The most obvious example is ...
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/American Oligarchy Presentation/Attachments/doge.png" alt="" style="width: 800px; object-fit: fill">
+
+
+###### *An unofficial logo of the Department of Government Efficiency* (5)
+
+notes: ... the creation of the Department of Government Efficiency, or "DOGE", a government department with the sole purpose of reducing the size of the United States government. However, some things still have to get done—with or without government support—and so the private sector will inevitably take over these essential functions of government, like healthcare. In reality, DOGE exists to rapidly privatise the assets of the United States government and concentrate them to wealthiest buyer, and capital strongholds like UnitedHealth stand ready to increase their economic dominance.
+
+And of course, the most obvious sign of an oligarchy so far: ...
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/American Oligarchy Presentation/Attachments/musk-trump-campaign.jpg" alt="" style="object-fit: scale-down">
+
+
+###### *Elon Musk celebrates at a Republican rally during the 2024 election campaign* (6)
+
+notes: Elon Musk's funding of Donald Trump's re-election campaign. Elon Musk, the world's richest man, spent over *$100 million US* on Trump's campaign, and in return, Trump personally advertised Tesla's electric vehicles at a White House press conference, and Musk was appointed head of the aforementioned Department of Government Efficiency. This is clearly collusion, so check two features off already.
+
+But Musk is not the only economic superpower supporting Donald Trump ...
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/American Oligarchy Presentation/Attachments/big-tech-inauguration-collusion.png" alt="" style="object-fit: scale-down">
+
+
+###### *"Big Tech" CEOs line up for Donald Trump's inauguration* (7)
+
+notes: ... —just look at the line-up of "Big Tech" CEOs at his inauguration, all vying to get his attention with million-dollar donations to his cause, and then later assisting his Immigration and Customs Enforcement agents in locating and arresting people. In response to this, only two months after his inauguration, Trump fired the two Democrat-aligned leaders of the Federal Trade Commission, leaving three Republican commissioners in charge of the the US consumer protection agency. Considering just how vital the FTC is in stopping illegal practices in the American economy, and how they are often the sole perpetrator in challenging large corporations, forcing an alignment with the Trump administration is a clear step in allowing the economic power of Big Tech to continue.
+
+The dismissal of regulation did not just stop at the FTC though. Earlier this month, ...
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/American Oligarchy Presentation/Attachments/doj-google.webp" alt="" style="object-fit: scale-down">
+
+
+###### *The antitrust case against Google Chrome* (8)
+
+notes: ... the antitrust case against Google Chrome from last year was concluded, with Google escaping with no significant penalties despite the court *affirming that Google had an illegal monopoly*. Just to re-iterate, the United States has found that Google is breaking the law and imposed *no fines* or other punishments for the behaviour. Combined with Trump's control over the FTC, it is unlikely there will be another threat to Google's economic might any time soon. As a reward for supporting the president, Google is now allowed to ignore the rule of law, and it is highly likely that similar results from other large corporations will follow suit.
+
+In just a few short months under Donald Trump, the United States has checked-off all three big features of an oligarchy, and is starting to look scarily similar to post-soviet Russia. However, there is one major difference that stops the United States from being classified as a cut-and-dry oligarchy: Trump's control over the media.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+###### Part 3:
+
+## Differences
+
+notes: After the fall of the Soviet Union, the Russian press was fairly free and operated without interference from the government for most of the 1990s. This is in significant contrast to Donald Trump's regime, with the media firmly in the crosshairs of his presidency.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="03 Projects/American Oligarchy Presentation/Attachments/trump-media.jpg" alt="" style="object-fit: scale-down">
+
+
+###### *Donald Trump speaks with reports at the John F. Kennedy Center* (9)
+
+notes: Trump has already launched several lawsuits against popular American media outlets before taking office in January, and once in power has altered which press outlets are allowed in the White House press pool. This allows Trump to control the narrative and easily outreach other political viewpoints, and so long as the Supreme Court is on his side, he can silence and bankrupt any dissidents who go against him. This is a significant shift away from an oligarchical regime and leans far more into authoritarianism and consolation of power, as argued for by the Project 2025 initiative.
+
+Whilst the United States is (right now) undeniably an oligarchy, there is a chance that it could shift to an authoritarian regime sometime in the near future. The main factor in determining whether America becomes an authoritarian regime will be the oligarchs: if they join ranks with Trump, then the United States is an authoritarian regime. If they are left to operate independently, alongside the government, then the United States could end up becoming an mix of the two systems. Though for now, we can only speculate.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Conclusion
+
+notes: The three main features of an oligarchy are clear in both the United States and 90s Russia, with both suffering from an increasingly concentrated economy and a large amount of backdoor deals quietly boosting the power of Big Business, ultimately leading to the rule of law being overthrown and an oligarchy established. However, there is one difference stopping the United States from being *just* an oligarchy, and Trump's control over the media is pushing the United States more and more towards authoritarianism. Right now though, the United States is undeniably an oligarchy, and one that has been taking shape since the writing of the infamous Powell Memo—it only took until 2025 for one man to make it a reality. Thank you.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+References available online at https://marcdonaldoconnor.github.io/presentations/russian-oligarchy/references
+
+Script available in speaker view; just press "S"
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+	      RevealPointer,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+			]
+		},
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":false,"progress":false,"slideNumber":false,"transition":"none","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
