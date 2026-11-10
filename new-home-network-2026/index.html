@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>-</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../_revealjs/5.2.1/dist/reset.css">
+  <link rel="stylesheet" href="../_revealjs/5.2.1/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../_revealjs/5.2.1/dist/theme/dracula.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section class="slide level0">
+
+<p>Your home router sucks?</p>
+<h2 id="build-a-new-one">Build a new one</h2>
+<p>By Liam O’Connor</p>
+</section>
+<section class="slide level0">
+
+<img data-src="Attachments/old-network.jpg" class="r-stretch" />
+</section>
+<section class="slide level0">
+
+<img data-src="Attachments/new-network.jpg" class="r-stretch" />
+</section>
+<section class="slide level0">
+
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DHCPv4, SLAAC, IPv6-PD</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>IPv4 NAT w, port forwarding</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>nftables</code> firewall</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Local split-horizon DNS server</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Remote management</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>No cloud dependencies</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Automatic updates</td>
+<td>🟠</td>
+</tr>
+<tr>
+<td>QoS</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Ethernet and Wi-Fi improvements</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level0">
+
+<h2 id="time-management">Time management</h2>
+<aside class="notes">
+<p>Upgrade this slide if I have time. Otherwise just fucking yap. I
+don’t care.</p>
+</aside>
+</section>
+<section class="slide level0">
+
+<h3 class="fragment semi-fade-out" data-fragment-index="1"
+id="target-audience">Target Audience:</h3>
+<ol type="1">
+<li class="fragment fade-in-then-semi-out" data-fragment-index="1">My parents</li>
+<li class="fragment fade-in-then-semi-out">ME!</li>
+</ol>
+</section>
+<section class="slide level0">
+
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Qty</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dell Optiplex</td>
+<td>1</td>
+<td>$165</td>
+</tr>
+<tr>
+<td>Ethernet cables</td>
+<td>4</td>
+<td>$4.20</td>
+</tr>
+<tr>
+<td>Switch</td>
+<td>1</td>
+<td>$47</td>
+</tr>
+<tr>
+<td>Wi-Fi AP</td>
+<td>1</td>
+<td>$111</td>
+</tr>
+<tr>
+<td>PoE injector</td>
+<td>1</td>
+<td>$51.95</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>$391.75</td>
+</tr>
+<tr>
+<td>Subtotal</td>
+<td></td>
+<td>$339.80</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level0">
+
+<h2 id="live-demonstration">Live Demonstration</h2>
+<h5 id="wireguard-remote-management">Wireguard remote management</h5>
+</section>
+<section class="slide level0">
+
+<h4 class="fragment semi-fade-out" data-fragment-index="1"
+id="what-did-i-learn">What did I learn?</h4>
+<ol type="1">
+<li class="fragment fade-in-then-semi-out" data-fragment-index="1">The NBN is weird – really weird</li>
+<li class="fragment fade-in-then-semi-out"><code>nftables</code> and packet flow on Linux</li>
+<li class="fragment fade-in-then-semi-out">Active vs. Passive PoE</li>
+</ol>
+<aside class="notes">
+<ul>
+<li>The NBN is fucking weird – two IPv6 addresses? Needing both SLAAC
+and DHCPv6-PD for the network to function properly? Running over DSL and
+needing a modem? It’s so bizarre that this is the internet
+infrastructure of our country.</li>
+<li>nftables and firewalls on Linux; I went from having very little
+understanding of the packet flow to having a more moderate knowledge of
+how the Linux networking stack processes packets. Especially the
+nftables configuration language, this is a great transferable
+skill.</li>
+<li>There are different PoE types, active and passive.</li>
+</ul>
+</aside>
+</section>
+<section class="slide level0">
+
+<img data-src="Attachments/wan0-int-snippet.png" class="r-stretch" />
+<p><em>Biggest challenge: IPv6</em></p>
+<aside class="notes">
+<p>Biggest challenge: IPv6 by a mile. This is not because IPv6 is a bad
+protocol (in fact, it is far superior to IPv4 and I have tried to
+implement it as much as possible), but because NBN handles IPv6
+weirdly.</p>
+<p>Debugging: lots of crafting IPv6 packets with <code>rdisc6</code>,
+the logs from <code>networkd</code>, <code>ping</code>,
+<code>curl</code>, and calling my ISP to get them to run tests on their
+end.</p>
+<p>Key skills in time management: be realistic about what you can do.
+Doing the production at the same time really made me struggle.</p>
+</aside>
+</section>
+<section class="slide level0">
+
+<h4 class="fragment semi-fade-out" data-fragment-index="1"
+id="future-vision">Future vision</h4>
+<ol type="1">
+<li class="fragment fade-in-then-semi-out" data-fragment-index="1">More wired Ethernet</li>
+<li class="fragment fade-in-then-semi-out">Second Wi-Fi AP</li>
+<li class="fragment fade-in-then-semi-out">FTTP upgrade</li>
+</ol>
+</section>
+<section class="slide level0">
+
+<h1 id="questions">Questions?</h1>
+</section>
+    </div>
+  </div>
+
+  <script src="../_revealjs/5.2.1/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="../_revealjs/5.2.1/plugin/notes/notes.js"></script>
+  <script src="../_revealjs/5.2.1/plugin/search/search.js"></script>
+  <script src="../_revealjs/5.2.1/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
